@@ -27,6 +27,7 @@ public class FizzBuzzTest {
     public void assertRunnable() {
         assertTrue(com.chaos.fizzbuzz.Runnable.class.isAssignableFrom(FizzBuzz.class));
     }
+
     @Test
     public void assertInputOneEqualsOne() {
         assertEquals("1", fizzBuzz.run(1));

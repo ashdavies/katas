@@ -1,21 +1,22 @@
 package com.chaos.fibonacci;
 
-import android.util.SparseArray;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CachedRecursiveFibonacciGenerator extends RecursiveFibonacciGenerator {
-    private final SparseArray<Long> cache = new SparseArray<>();
+    private final Map<Integer, Long> cache = new HashMap<>();
 
-    public CachedRecursiveFibonacciGenerator(final long limit) {
+    public CachedRecursiveFibonacciGenerator(long limit) {
         super(limit);
     }
 
     @Override
-    public Long calculate(final int number) {
-        Long result = this.cache.get(number);
+    public Long calculate(int number) {
+        Long result = cache.get(number);
 
         if (result == null) {
             result = super.calculate(number);
-            this.cache.put(number, result);
+            cache.put(number, result);
         }
 
         return result;

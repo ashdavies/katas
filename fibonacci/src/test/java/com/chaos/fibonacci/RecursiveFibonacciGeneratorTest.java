@@ -1,7 +1,5 @@
 package com.chaos.fibonacci;
 
-import com.chaos.fibonacci.FibonacciGenerator;
-import com.chaos.fibonacci.RecursiveFibonacciGenerator;
 import org.junit.Before;
 import org.junit.Test;
 

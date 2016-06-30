@@ -14,17 +14,17 @@ public class BalanceTest {
     private Balance balance;
 
     @Before
-    public void setUp() {
+    public void setUp() throws Exception {
         balance = new Balance();
     }
 
     @Test
-    public void assertZeroStartBalance() {
-        assertEquals(0, balance.getAmount());
+    public void assertZeroStartBalance() throws Exception {
+        assertEquals(BigInteger.ZERO, balance.getAmount());
     }
 
     @Test
-    public void assertStartBalance() {
+    public void assertStartBalance() throws Exception {
         Balance balance = new Balance(BigInteger.ONE);
         assertEquals(BigInteger.ONE, balance.getAmount());
     }

@@ -5,7 +5,6 @@ import com.chaos.bank.Ledger;
 import com.chaos.bank.Printer;
 import com.chaos.bank.exception.NoFundsException;
 import org.junit.*;
-import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -27,13 +26,13 @@ public class StandardAccountTest {
     Printer printer;
 
     @Before
-    public void setUp() {
+    public void setUp() throws Exception {
         account = new StandardAccount(ledger);
     }
 
     @Test
     @Ignore
-    public void acceptanceTest() {
+    public void acceptanceTest() throws Exception {
         account.deposit(BigInteger.valueOf(1000), LocalDateTime.of(LocalDate.of(2012, 1, 10), LocalTime.now()));
         account.deposit(BigInteger.valueOf(2000), LocalDateTime.of(LocalDate.of(2012, 1, 13), LocalTime.now()));
         account.withdraw(BigInteger.valueOf(1000), LocalDateTime.of(LocalDate.of(2012, 1, 14), LocalTime.now()));
@@ -45,7 +44,7 @@ public class StandardAccountTest {
     }
 
     @Test
-    public void assertWithdrawal() {
+    public void assertWithdrawal() throws Exception {
         LocalDateTime now = LocalDateTime.now();
 
         Mockito.when(ledger.getBalance()).thenReturn(BigInteger.ONE);
@@ -56,7 +55,7 @@ public class StandardAccountTest {
     }
 
     @Test
-    public void assertDeposit() {
+    public void assertDeposit() throws Exception {
         LocalDateTime now = LocalDateTime.now();
 
         account.deposit(BigInteger.ONE, now);
@@ -64,7 +63,7 @@ public class StandardAccountTest {
     }
 
     @Test(expected = NoFundsException.class)
-    public void assertWithdrawalBelowBalanceException() {
+    public void assertWithdrawalBelowBalanceException() throws Exception {
         LocalDateTime now = LocalDateTime.now();
 
         Mockito.when(ledger.getBalance()).thenReturn(BigInteger.ZERO);

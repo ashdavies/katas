@@ -11,7 +11,7 @@ public class RecursiveFibonacciGenerator extends FibonacciGenerator {
             return 0l;
         }
 
-        else if (number < 3) {
+        else if (number <= 2) {
             return 1l;
         }
 

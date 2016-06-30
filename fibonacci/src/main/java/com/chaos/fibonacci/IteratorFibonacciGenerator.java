@@ -1,7 +1,7 @@
 package com.chaos.fibonacci;
 
 public class IteratorFibonacciGenerator extends FibonacciGenerator {
-    public IteratorFibonacciGenerator(final long limit) {
+    public IteratorFibonacciGenerator(long limit) {
         super(limit);
     }
 

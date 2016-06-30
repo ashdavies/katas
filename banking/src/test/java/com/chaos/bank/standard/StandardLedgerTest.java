@@ -18,12 +18,12 @@ public class StandardLedgerTest {
     private Ledger ledger;
 
     @Before
-    public void setUp() {
+    public void setUp() throws Exception {
         ledger = new StandardLedger();
     }
 
     @Test
-    public void assertWithdrawTransaction() {
+    public void assertWithdrawTransaction() throws Exception {
         LocalDateTime now = LocalDateTime.now();
         ledger.withdraw(BigInteger.TEN, now);
 
@@ -33,7 +33,7 @@ public class StandardLedgerTest {
     }
 
     @Test
-    public void assertDepositTransaction() {
+    public void assertDepositTransaction() throws Exception {
         LocalDateTime now = LocalDateTime.now();
         ledger.deposit(BigInteger.ONE, now);
 
@@ -43,7 +43,7 @@ public class StandardLedgerTest {
     }
 
     @Test
-    public void assertCalculateBalance() {
+    public void assertCalculateBalance() throws Exception {
         ledger.deposit(BigInteger.valueOf(14), LocalDateTime.now());
         ledger.withdraw(BigInteger.valueOf(3), LocalDateTime.now());
         ledger.withdraw(BigInteger.valueOf(2), LocalDateTime.now());
@@ -52,12 +52,12 @@ public class StandardLedgerTest {
     }
 
     @Test
-    public void assertStandardAllowance() {
+    public void assertStandardAllowance() throws Exception {
         assertEquals(BigInteger.TEN, ledger.getAllowance());
     }
 
     @Test
-    public void assertGetTransactionList() {
+    public void assertGetTransactionList() throws Exception {
         ledger.deposit(BigInteger.ONE, LocalDateTime.now());
         ledger.deposit(BigInteger.ONE, LocalDateTime.now());
 
