@@ -1,0 +1,6 @@
+rootProject.name = 'katas'
+include 'fizz-buzz'
+include 'banking'
+include 'fibbonacci'
+include 'racing-car'
+
