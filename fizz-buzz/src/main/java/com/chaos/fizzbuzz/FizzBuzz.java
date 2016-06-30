@@ -14,7 +14,7 @@ class FizzBuzz implements Runnable {
     @Override
     public String run(int value) {
 
-        for (Rule rule: rules) {
+        for (Rule rule : rules) {
             String result = rule.run(value);
 
             if (result != null) {
