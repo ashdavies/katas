@@ -4,9 +4,6 @@ import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
-/**
- * Simple SimpleList Kata: http://codekata.com/kata/kata21-simple-lists/
- */
 public class SimpleListTest {
 
   private SimpleList simpleList;
