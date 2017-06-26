@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rx-basics-kata.iml" filepath="$PROJECT_DIR$/.idea/modules/rx-basics-kata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rx-basics-kata_main.iml" filepath="$PROJECT_DIR$/.idea/modules/rx-basics-kata_main.iml" group="rx-basics-kata" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rx-basics-kata_test.iml" filepath="$PROJECT_DIR$/.idea/modules/rx-basics-kata_test.iml" group="rx-basics-kata" />
+    </modules>
+  </component>
+</project>
